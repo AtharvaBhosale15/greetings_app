@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Square finder app by Atharva Bhosale</title>
+<style>
+*{font-size:80px;}
+body{background-color:azure;}
+</style>
+</head>
+<body>
+<center>
+<h1> Square finder</h1>
+<form onsubmit="find()">
+<input type="number" step="any" id="num" placeholder="enter number"/>
+<br/><br/>
+<input type="submit" value="Find Square"/>
+</form>
+<h2 id="msg">
+<script>
+function find()
+{
+event.preventDefault();
+let num=document.getElementById("num");
+let msg=document.getElementById("msg");
+
+if(num.value ==="")
+{
+alert("please enter number");
+msg.innerHTML="";
+num.focus();
+return;
+}
+
+let n= parseFloat(num.value);
+let s=n**2;
+let a="square="+s.toFixed(2);
+msg.innerHTML=a;
+}
+</script>
+</center>
+</body>
+</html>
